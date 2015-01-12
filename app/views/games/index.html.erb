@@ -1,0 +1,21 @@
+<h3> Game History</h3>
+
+<% @games.each do |l| %>
+	
+	<tr>
+		<td>
+			<%= l.host %>
+		</td>
+		<td>
+			<%= l.date %>
+		</td>
+		<td>
+			<%= link_to "Show", l %>
+			<%= link_to "Edit", edit_game_path(l) %>
+			<%= link_to "Delete", l, method: :delete, data: {confirm: "Are you sure"} %>
+		</td>
+	</tr>
+	<br>
+		<%end%>
+		<br>
+		<%=link_to "New", new_game_path%>

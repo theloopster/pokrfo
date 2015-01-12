@@ -1,0 +1,13 @@
+<%= form_for (@player) do |f| %>
+<%= f.label :first%>
+<%= f.text_field :first %>
+<%= f.label :last%>
+<%= f.text_field :last %>
+<%= f.label :handle%>
+<%= f.text_field :handle %>
+<%= f.label :address%>
+<%= f.text_field :address %>
+<%= f.label :zip%>
+<%= f.number_field :zip %>
+<%=f.submit %>
+<% end %>

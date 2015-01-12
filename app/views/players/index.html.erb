@@ -1,0 +1,26 @@
+<h3>Player List</h3>
+
+<% @players.each do |p|%>
+	
+	<tr>
+		<td>
+			<%= p.first %>
+		</td>
+		<td>
+			<%= p.last %>
+		</td>
+		<td>
+			<%= p.handle %>
+		</td>
+		<td>
+			<%= p.address %>
+		</td>
+		<td>
+			<%= p.zip %>
+		</td>
+	</tr>
+	<br>
+
+<%end%>
+		<br>
+		<%= link_to "New", new_player_path%>

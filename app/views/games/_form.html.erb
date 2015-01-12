@@ -1,0 +1,12 @@
+<%= form_for (game) do |f| %>
+<%= f.label :host%>
+<%= f.text_field :host %><br>
+<%= f.label :date%>
+<%= f.date_field :date %>
+<%= f.label :player_ids, "Players"%>
+<%= f.collection_select :player_ids, Player.order(:last), :id, :last, {}, {multiple: true}%>
+
+<%=f.submit %>
+
+
+<% end %>
